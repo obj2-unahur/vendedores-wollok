@@ -7,13 +7,13 @@ const sanIgnacio = new Ciudad(provincia = misiones)
 describe "Vendedor fijo" {
 	const obera = new Ciudad(provincia = misiones)
 	const vendedorFijo = new VendedorFijo(ciudadOrigen = obera)
-  
- 	test "puedeTrabajarEn su ciudad de origen" {
-    	assert.that(vendedorFijo.puedeTrabajarEn(obera))
-  	}
-  	
-  	test "puedeTrabajarEn otra ciudad" {
-    	assert.notThat(vendedorFijo.puedeTrabajarEn(sanIgnacio))
+	
+	test "puedeTrabajarEn su ciudad de origen" {
+		assert.that(vendedorFijo.puedeTrabajarEn(obera))
+	}
+		
+	test "puedeTrabajarEn otra ciudad" {
+		assert.notThat(vendedorFijo.puedeTrabajarEn(sanIgnacio))
 	}
 }
 
@@ -24,9 +24,9 @@ describe "Viajante" {
 	
 	test "puedeTrabajarEn una ciudad que pertenece a una provincia habilitada" {
 		assert.that(viajante.puedeTrabajarEn(sanIgnacio))
-    }
-      
-    test "una ciudad que no pertenece a una provincia habilitada" {
-        assert.notThat(viajante.puedeTrabajarEn(villaDolores))
-    }
- }
+	}
+			
+	test "una ciudad que no pertenece a una provincia habilitada" {
+		assert.notThat(viajante.puedeTrabajarEn(villaDolores))
+	}
+}
